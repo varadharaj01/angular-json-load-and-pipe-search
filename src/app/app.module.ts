@@ -4,10 +4,6 @@ import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 import {CategoryPipe} from './category.pipe';
 import { AppRoutingModule } from './app-routing.module';
-// Imports for loading & configuring the in-memory web api
- import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
-import {PersistenceModule} from 'angular-persistence'
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard.component';
 import { HeroesComponent }      from './heroes.component';
@@ -21,8 +17,7 @@ import { Pipe } from '@angular/core';
     BrowserModule,
     FormsModule,
     HttpModule,
-//InMemoryWebApiModule.forRoot(InMemoryDataService),
-      AppRoutingModule
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
