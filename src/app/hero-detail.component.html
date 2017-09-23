@@ -1,0 +1,22 @@
+<div *ngIf="hero">
+  <h2>{{hero.name}} details!</h2>
+  <div>
+    <label>id: </label>{{hero.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="hero.name" placeholder="name" />
+   </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save(hero.name)">Save</button>
+  <button (click)="show()">Show Storage</button>
+
+</div>
+
+<div class="col-xs-12">
+<ul class="list-group" >
+<li *ngFor="let item of items" class="list-group-item" #ival>
+{{item}}
+<button class="pull-right btn btn-sm btn-warning" (click)="deleteItem(item)">Delete</button>
+</li>
+</ul>
+</div>
